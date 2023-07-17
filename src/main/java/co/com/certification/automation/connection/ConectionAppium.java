@@ -11,7 +11,7 @@ import java.time.Duration;
 public class ConectionAppium {
     private static ConectionAppium conectionAppium;
 
-    private static AndroidDriver androidDriver;
+    private final AndroidDriver androidDriver;
 
   public static ConectionAppium getConectionAppium() throws MalformedURLException {
         if(conectionAppium==null)
@@ -24,7 +24,7 @@ public class ConectionAppium {
        androidDriver= configAndroidDriver();
     }
 
-    public static AndroidDriver getAndroidDriver() {
+    public  AndroidDriver getAndroidDriver() {
         return androidDriver;
     }
 
@@ -39,8 +39,8 @@ public class ConectionAppium {
         options.setAppActivity("com.exito.appcompania.views.initialaccess.activities.SplashActivity");
 
         AndroidDriver androidDriver=new AndroidDriver(new URL("http://127.0.0.1:4723"),options);
+
         androidDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(13));
-        androidDriver.quit();
 
         return androidDriver;
 
