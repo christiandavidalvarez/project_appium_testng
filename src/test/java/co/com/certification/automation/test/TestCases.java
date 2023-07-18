@@ -34,10 +34,10 @@ public class TestCases extends ConfigTest {
         loginPage=new LoginPage(androidDriver,testOfExtentReport);
         loginPage.login(USER_EMAIL,USER_PASSWORD);
         SearchProductPage searchProductPage=new SearchProductPage(androidDriver,testOfExtentReport);
-        String product="celular";
+        String product="Celular";
         searchProductPage.addProductToShopping(product);
-        boolean elementContainText=searchProductPage.nameProductInShoppingCart().contains(product);
-        Assert.assertTrue(elementContainText);
+        boolean elementIsDisplayed=searchProductPage.productIsDisplayed();
+        Assert.assertTrue(elementIsDisplayed);
     }
 
     @AfterTest

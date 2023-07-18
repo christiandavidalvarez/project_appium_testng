@@ -54,16 +54,4 @@ public class BasePage {
 
     }
 
-    //Vertical Swipe by percentages
-    public void verticalSwipeByPercentages(double startPercentage, double endPercentage, double anchorPercentage) {
-        Dimension size = androidDriver.manage().window().getSize();
-        int anchor = (int) (size.width * anchorPercentage);
-        int startPoint = (int) (size.height * startPercentage);
-        int endPoint = (int) (size.height * endPercentage);
-        new TouchAction(androidDriver)
-                .press(point(anchor, startPoint))
-                .waitAction(waitOptions(ofMillis(1000)))
-                .moveTo(point(anchor, endPoint))
-                .release().perform();
-    }
 }

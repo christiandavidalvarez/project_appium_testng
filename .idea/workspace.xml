@@ -5,13 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="86437fb6-9947-40cf-9bbc-86df6da3861f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/co/com/certification/automation/pages/LoginPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/co/com/certification/automation/pages/SearchProductPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/certification/automation/connection/ConectionAppium.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/certification/automation/connection/ConectionAppium.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/co/com/certification/automation/pages/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/certification/automation/pages/BasePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/certification/automation/pages/MainPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/certification/automation/pages/MainPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/co/com/certification/automation/test/ConfigTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/co/com/certification/automation/test/ConfigTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/co/com/certification/automation/pages/SearchProductPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/co/com/certification/automation/pages/SearchProductPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/co/com/certification/automation/test/TestCases.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/co/com/certification/automation/test/TestCases.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

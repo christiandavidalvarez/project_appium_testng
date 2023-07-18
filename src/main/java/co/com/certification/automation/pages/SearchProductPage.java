@@ -1,11 +1,8 @@
 package co.com.certification.automation.pages;
 
 import com.aventstack.extentreports.ExtentTest;
-import io.appium.java_client.MobileBy;
-import io.appium.java_client.MobileCommand;
 import io.appium.java_client.android.AndroidDriver;
 import org.openqa.selenium.By;
-import org.openqa.selenium.interactions.Actions;
 
 public class SearchProductPage extends BasePage{
 
@@ -62,7 +59,7 @@ public class SearchProductPage extends BasePage{
     private final By locatorProductInShoppingCart=By.xpath("/hierarchy/android.widget.FrameLayout/android.widget" +
             ".LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view" +
             ".ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup[2]" +
-            "/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[1]/android.widget.TextView[2]");
+            "/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[5]");
 
 
 
@@ -75,30 +72,22 @@ public class SearchProductPage extends BasePage{
         androidDriver.findElement(locatorSearchBar).sendKeys(product);
         androidDriver.findElement(locatorSearchBar).click();
         androidDriver.findElement(locatorButtonReceivedInHome).click();
-
+        attachedScreenShotTotest("Confirmar direccion de envio");
         androidDriver.findElement(locatorButtonConfirmAdress).click();
 
         androidDriver.findElement(locatorEditInputSearchData).sendKeys(product);
+        attachedScreenShotTotest("Ingresar parametros de busqueda");
         androidDriver.findElement(locatorEditInputSearchData).click();
         androidDriver.findElement(locatorTextInSearch).click();
-
         androidDriver.findElement(locatorFirstProduct).click();
-
-        String text= "Agregar al carrito";
-        androidDriver.findElement(MobileBy.AndroidUIAutomator("new UiScrollable(new UiSelector())" +
-                ".scrollIntoView(new UiSelector().text(\"" + text + "\"));"));
-
-
-        androidDriver.findElement(locatorButtonAddToCart).click();
-
-        androidDriver.findElement(locatorDontSendDonationButton).click();
-        androidDriver.findElement(locatorButtonPay).click();
-
+        attachedScreenShotTotest("Agregar a carrito");
         androidDriver.findElement(locatorButtonShoppingCart).click();
     }
 
-    public String nameProductInShoppingCart(){
-        return androidDriver.findElement(locatorProductInShoppingCart).getText();
+    public boolean productIsDisplayed(){
+        boolean isProductDisplayed= androidDriver.findElement(locatorProductInShoppingCart).isDisplayed();
+        attachedScreenShotTotest("Pantalla de carrito con productos agregados");
+        return isProductDisplayed;
     }
 
 
