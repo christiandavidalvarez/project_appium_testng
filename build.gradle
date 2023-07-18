@@ -15,6 +15,8 @@ dependencies {
     implementation group: 'io.appium', name: 'java-client', version: '8.1.1'
     implementation group: 'org.seleniumhq.selenium', name: 'selenium-api', version: '4.5.0'
     implementation group: 'org.seleniumhq.selenium', name: 'selenium-remote-driver', version: '4.5.0'
+    implementation 'com.aventstack:extentreports:5.0.9'
+    implementation 'commons-io:commons-io:2.11.0'
 
 
 }

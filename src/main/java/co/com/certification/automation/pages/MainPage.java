@@ -1,14 +1,13 @@
 package co.com.certification.automation.pages;
 
+import com.aventstack.extentreports.ExtentTest;
 import io.appium.java_client.android.AndroidDriver;
 import org.openqa.selenium.By;
 
-public class MainPage {
+public class MainPage extends BasePage {
 
-    private AndroidDriver androidDriver;
-
-    public MainPage(AndroidDriver androidDriver) {
-        this.androidDriver = androidDriver;
+    public MainPage(AndroidDriver androidDriver , ExtentTest extentTest) {
+        super(androidDriver,extentTest);
     }
 
     private final By locatorButtonLogin=By.id("com.exito.appcompania:id/AppCompatButton_ingresar");
@@ -16,7 +15,7 @@ public class MainPage {
 
     public void getInToLogin(){
         androidDriver.findElement(locatorButtonLogin).click();
-        System.out.println( androidDriver.findElement(locatorButtonLogin).getText());
+        attachedScreenShotTotest("Se realiza login en exito");
     }
 
 
