@@ -15,7 +15,8 @@ public class MainPage extends BasePage {
 
     public void getInToLogin(){
         androidDriver.findElement(locatorButtonLogin).click();
-        attachedScreenShotTotest("Se realiza login en exito");
+        attachedScreenShotTotest("El usuario ingresa al login en exito");
+
     }
 
 

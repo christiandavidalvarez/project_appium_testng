@@ -24,7 +24,6 @@ public class ConfigTest {
 
     protected AndroidDriver androidDriver;
 
-    protected MainPage mainPage;
 
     @BeforeTest
     public void setUp() throws MalformedURLException {
@@ -54,8 +53,6 @@ public class ConfigTest {
         extentReports.flush();
 
     }
-
-
 
 
 }
