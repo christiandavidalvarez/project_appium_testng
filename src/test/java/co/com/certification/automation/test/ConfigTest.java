@@ -12,6 +12,7 @@ import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
+import static co.com.certification.automation.util.Formats.getDateTimeForEvidence;
 
 import java.net.MalformedURLException;
 
@@ -32,7 +33,9 @@ public class ConfigTest {
     @BeforeMethod
     public static void startTest()
     {
-        extentHtmlReport = new ExtentSparkReporter("reportes/reporterTestResult.html");
+        String formatToReport=getDateTimeForEvidence();
+        extentHtmlReport = new ExtentSparkReporter(String.format(
+                "reportes/reporterTestResult_%s.html",formatToReport));
         extentReports=new ExtentReports();
         extentReports.attachReporter(extentHtmlReport);
 

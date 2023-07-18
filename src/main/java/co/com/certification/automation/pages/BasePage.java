@@ -13,6 +13,7 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import static co.com.certification.automation.util.Formats.getDateTimeForEvidence;
 
 public class BasePage {
 
@@ -26,8 +27,8 @@ public class BasePage {
     }
     private String captureScreenshot()  {
         // Capturar la captura de pantalla utilizando Appium y WebDriverException
-        DateTimeFormatter formatDateTime = DateTimeFormatter.ofPattern("yyyy-MM-dd_HH-mm-ss");
-        String dateTimeScreenshoot= LocalDateTime.now().format(formatDateTime);
+
+        String dateTimeScreenshoot= getDateTimeForEvidence();
         String screenshotPath =
                 String.format("reportes/capturasDePantalla/screenshot_%s.png",dateTimeScreenshoot);
         try {
